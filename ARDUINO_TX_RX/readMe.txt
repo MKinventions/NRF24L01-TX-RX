@@ -1,0 +1,1 @@
+This folder contains all STM32 NRF24L01 Transmitter and Receiver Projects.
