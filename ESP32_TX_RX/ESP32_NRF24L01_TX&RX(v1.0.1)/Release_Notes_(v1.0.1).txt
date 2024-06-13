@@ -1,0 +1,21 @@
+/***************************TX******************************************/
+TX Release Notes (Version 1.0.1)
+Binding Process Changes with Button Counter:
+
+Double Press:- If the button is pressed 2 times, the device will enter binding mode for 5 seconds and then restart.
+Five Presses:- If the button is pressed 5 times, the device will delete the RX address from the EEPROM memory.
+Binding Mode Indication:- When the TX is in binding mode, the green LED will blink rapidly for 5 seconds.
+RX Binding Mode Interaction:- If the RX is in binding mode, the TX will receive the RX address and store it in the EEPROM memory.
+Provision Timeout:- If no RX address is received after the 5-second provisioning timeout, the device will restart.
+Reset Key Functionality:- Added functionality to send a reset key to the RX if the TX device is reset, prompting the RX to delete the TX address from its memory.
+Other Functionalities:- All other functionalities remain the same as in version 1.0.0.
+
+
+
+
+/***************************RX******************************************/
+RX Release Notes (Version 1.0.1)
+Binding Mode Reset Function Removed:- Removed the reset function in binding mode if a TX address is found.
+Reset Key Handling from TX:- Added functionality to handle the reset key received from the TX. If the TX deletes the RX address from its EEPROM memory, the RX will recognize this reset key.
+EEPROM Memory Management:- If the RX receives a reset key (reset = 1), it will delete the TX address from its EEPROM memory.
+Other Functionalities:- All other functionalities remain the same as in version 1.0.0.
