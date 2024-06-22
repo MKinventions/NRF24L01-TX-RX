@@ -1,0 +1,10 @@
+Release Notes for Version 1.1.4
+New Features
+
+Receivers Binding/Pairing Page:
+1. Page 9 Update:
+a. Submenus Added: Page 9 now includes submenus: Yes, No, and Delete.
+b. Individual Address Deletion: Users can delete individual receiver addresses.
+
+2. Existing Features
+All features from the previous version (v1.1.3) remain unchanged.
