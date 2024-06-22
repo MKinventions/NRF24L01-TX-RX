@@ -1,0 +1,17 @@
+Release Notes for Version 1.1.3
+New Features
+
+1. Receivers Binding/Pairing Page:
+a. Page 9 Added: A new page (Page 9) has been created specifically for binding/pairing receivers with the transmitter.
+b. Address Management: The page allows users to bind/pair receivers Rx1, Rx2, and Rx3 with the transmitter.
+c. Memory Management: Users can delete all receiver addresses from memory.
+d. Individual Pairing: When pairing is needed, each receiver must be paired individually.
+
+2. Receiver Type Update:
+a. New Device Types: Updated the receiver types to include Car, Drone, and Truck.
+b. Selective Communication: Depending on the selected type (Car, Drone, or Truck), the transmitter will communicate exclusively with the chosen device.
+
+3. Existing Features:
+All features from the previous version (v1.1.2) remain unchanged.
+These enhancements aim to improve the flexibility and control users have over their devices, making the system more user-friendly and customizable.
+
