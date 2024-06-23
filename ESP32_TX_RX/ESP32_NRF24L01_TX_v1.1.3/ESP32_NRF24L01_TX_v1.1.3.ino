@@ -1417,7 +1417,39 @@ void radio_settings(){
           display.setTextColor(WHITE);
           display.setCursor(0,12); display.print(" RECEIVER: " + String(receiver_Type));   
           display.setCursor(0,21); display.print(" JOY CALIBRATION:" + String(calibrationButton)); 
+
+  /**********************JOYSTICKS CALIBRATION*************************************************/
+   if(calibrationButton == 1){
+      int i = 0;
+      while (i <= 100) { //2seconds
+        Serial.println("Calibrating Joysticks for 2 sec: " + String(i));
+        display.clearDisplay(); 
+        display.setTextColor(WHITE);
+        display.setCursor(0,30); display.print("Calibrating...");display.print(i); 
+        display.display();
           
+        i++;
+          
+        if (i == 100) {
+         
+     joystick_calibration(joystick1, joy1_value, joy1Dir_value, joy1CalibrationAddress);
+     joystick_calibration(joystick2, joy2_value, joy2Dir_value, joy2CalibrationAddress);
+      
+          delay(1000);
+          display.clearDisplay();
+          display.setTextSize(2);
+          display.setCursor(35,30); display.print("DONE");
+          display.display(); 
+          EEPROM.write(calibration_address, 0);
+          EEPROM.commit();
+          resetFunc();  //call reset
+          
+
+        }
+    }
+}
+/**********************JOYSTICKS CALIBRATION*************************************************/
+  
            switch(MainMenuSelect){
             case 0:
                   display.setCursor(0,55);display.print("Select Receiver Type");
