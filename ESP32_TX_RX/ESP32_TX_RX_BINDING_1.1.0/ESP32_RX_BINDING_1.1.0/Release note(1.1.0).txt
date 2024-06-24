@@ -1,0 +1,49 @@
+
+
+Release notes for version 1.1.0 detailing the changes made to the NRF24L01 transmitter and receiver:
+
+
+/*************************************************************************************************/
+Transmitter Changes:
+Binding Process Implementation: Implemented a new binding process using structures like tx_type = "car" and tx_address = 123456.
+Binding Transmission: Transmitter sends binding data to the receiver in structured format as 'tx_type = "car" and tx_address = 123456'.
+                      Transmitter will receives the binding data from the receiver in structured format as 'rx_type = "car" and rx_address = 654321'.
+
+Binding Conditions:
+
+Conditions checked:
+example:- receiverType = "car".
+Transmitter saves rx_address in memory if receiverType matches rx_type.
+rx_address is not saved if receiverType does not match rx_type.
+
+
+Data Sending Improvements:
+Improved data transmission to receiver by sending data in JSON format.
+Added switch2 to JSON command along with switch1.
+
+
+
+
+/*************************************************************************************************/
+Receiver Changes:
+Binding Process Implementation: Implemented a new binding process using structures like rx_type = "car" and rx_address = 654321.
+Binding Transmission: a. Receiver sends binding data to the transmitter in structured format as 'rx_type = "car" and rx_address = 654321'.
+                      b. Receiver will receives the binding data from the transmitter in structured format as 'tx_type = "car" and tx_address = 123456'.
+
+
+Binding Conditions:
+
+Conditions checked:
+example:- receiverType = "car".
+Receiver saves tx_address in memory if receiverType matches tx_type.
+tx_address is not saved if receiverType does not match tx_type.
+
+LED Control:
+Added functionality to control led1 and led2 based on the state of switch1 and switch2 received from transmitter.
+
+
+Data Reception Updates:
+Updated receiver to handle incoming data in JSON format.
+Ensured consistency with transmitter structure during the binding process.
+
+These release notes outline the changes made to the NRF24L01 transmitter and receiver in version 1.1.0, focusing on improving the binding process, data transmission in JSON format, and enhancing functionality related to switch and LED control.
