@@ -13,3 +13,6 @@ If the receiver type is set to "truck" in the transmitter, adding a "drone" or "
 
 2. Other Features
 All remaining features remain the same as in version 1.1.4.
+
+
+Note: This Transmitter is compatible with (ESP32_TX_RX_BINDING_1.1.0)
