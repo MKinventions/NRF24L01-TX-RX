@@ -1,0 +1,15 @@
+
+Release Notes for Version 1.1.5
+1. Updated Binding Process with Conditions
+
+a. Receiver Type: Car
+If the receiver type is set to "car" in the transmitter, adding a "drone" or "truck" will not save in the receiver memory.
+
+b. Receiver Type: Drone
+If the receiver type is set to "drone" in the transmitter, adding a "car" or "truck" will not save in the receiver memory.
+
+c. Receiver Type: Truck
+If the receiver type is set to "truck" in the transmitter, adding a "drone" or "car" will not save in the receiver memory.
+
+2. Other Features
+All remaining features remain the same as in version 1.1.4.
